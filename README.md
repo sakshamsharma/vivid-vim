@@ -25,6 +25,8 @@ cd ~
 cp -r .vim .vim.old
 cp .vimrc .vimrc.old
 git clone https://github.com/sakshamsharma/vivid-vim
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 echo "source ~/.vim/vivid.vim" > ~/.vimrc
 echo "Installing plugins :smile: "
 vim +NeoBundleInstall +qall
