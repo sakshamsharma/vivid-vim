@@ -67,6 +67,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'marcweber/vim-addon-mw-utils'
 Plug 'autoswap.vim'
 Plug 'KabbAmine/zeavim.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'rking/ag.vim'
 
 " Shortcuts
 Plug 'scrooloose/nerdcommenter'
@@ -271,6 +273,10 @@ nmap ,, <leader><leader>b
 " NERDTree
 nmap <c-n> :NERDTreeToggle<return>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif  "To autoclose if only nerd left
+
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 " For airline
 if has('unix')
