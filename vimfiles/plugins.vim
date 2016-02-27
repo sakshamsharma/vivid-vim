@@ -96,6 +96,7 @@ Plug 'digitaltoad/vim-jade'
 Plug 'lervag/vimtex'
 Plug 'rgrinberg/vim-ocaml'
 Plug 'kchmck/vim-coffee-script'
+Plug 'vhda/verilog_systemverilog.vim'
 
 Plug 'eagletmt/neco-ghc'            " For haskell completions
 Plug 'eagletmt/ghcmod-vim'

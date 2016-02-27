@@ -11,7 +11,7 @@ set pastetoggle=<F2>
 
 " New cool space mappings
 nnoremap <Space>w :w<CR>
-nnoremap <Space>q :wq<CR>
+nnoremap <Space>q :x<CR>
 vmap <Space>y "+yy
 vmap <Space>d "+dd
 nmap <Space>y "+yy
