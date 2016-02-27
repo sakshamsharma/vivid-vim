@@ -4,3 +4,5 @@
 !undodir/stub.md
 !.gitignore
 !README.md
+!vimfiles/
+!vimfiles/*
