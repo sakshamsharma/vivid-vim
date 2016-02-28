@@ -1,6 +1,4 @@
-syntax on
 filetype plugin indent on
-syntax enable
 set wrap
 set title  " Set window title automatically
 
@@ -12,7 +10,6 @@ set foldmethod=indent   " Enable code folding with z,a
 set foldlevel=99
 
 set backspace=indent,eol,start
-set background=dark
 set shiftwidth=2
 set shiftround
 set tabstop=2

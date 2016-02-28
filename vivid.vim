@@ -3,6 +3,7 @@ source ~/.vim/vimfiles/functions.vim
 source ~/.vim/vimfiles/keys.vim
 source ~/.vim/vimfiles/settings.vim
 source ~/.vim/vimfiles/appearance.vim
+source ~/.vim/vimfiles/neocomplete.vim
 
 " TODO
 " Move these commands into their proper places (?) sometime

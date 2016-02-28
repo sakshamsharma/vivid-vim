@@ -69,6 +69,8 @@ Plug 'autoswap.vim'
 Plug 'KabbAmine/zeavim.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
+Plug 'Shougo/neocomplete.vim'
+Plug 'ervandew/supertab'
 
 " Shortcuts
 Plug 'scrooloose/nerdcommenter'
@@ -77,8 +79,10 @@ Plug 'vim-scripts/closetag.vim'
 
 " Appearance
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'myusuf3/numbers.vim'
+Plug 'ajh17/Spacegray.vim'
 
 " Colorschemes
 Plug 'tomasr/molokai'
