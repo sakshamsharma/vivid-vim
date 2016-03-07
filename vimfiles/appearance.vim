@@ -1,11 +1,5 @@
-"set t_Co=256
-
-" Settings for solarized theme
-let g:solarized_termcolors=16
-let g:solarized_termtrans = 1
-syntax enable
-set background=dark
-colorscheme solarized
+set t_Co=256
+colorscheme jellybeans
 
 set gfn=monofur\ for\ Powerline\ Regular\ 14
 

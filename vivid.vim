@@ -4,6 +4,7 @@ source ~/.vim/vimfiles/keys.vim
 source ~/.vim/vimfiles/settings.vim
 source ~/.vim/vimfiles/appearance.vim
 source ~/.vim/vimfiles/neocomplete.vim
+source ~/.vim/vimfiles/haskell.vim
 
 " TODO
 " Move these commands into their proper places (?) sometime
