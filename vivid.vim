@@ -5,6 +5,7 @@ source ~/.vim/vimfiles/settings.vim
 source ~/.vim/vimfiles/appearance.vim
 source ~/.vim/vimfiles/neocomplete.vim
 source ~/.vim/vimfiles/haskell.vim
+source ~/.vim/vimfiles/syntastic.vim
 
 " TODO
 " Move these commands into their proper places (?) sometime
@@ -25,16 +26,10 @@ let g:haskell_indent_if = 3
 " NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif  "To autoclose if only nerd left
 
-" For syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { 'passive_filetypes': ['dart']  }
+" Tabularize
+vmap a= :Tabularize /=<CR>
+vmap a; :Tabularize /::<CR>
+vmap a- :Tabularize /-><CR>
 
 " Miscellaneous
 " ===============

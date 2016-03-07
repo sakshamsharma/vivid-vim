@@ -75,4 +75,4 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " NERDTree open
-nmap <c-n> :NERDTreeToggle<return>
+nmap <F3> ;NERDTreeToggle<return>

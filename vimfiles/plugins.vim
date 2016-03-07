@@ -18,11 +18,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Add or remove your Bundles here:
 NeoBundle 'scrooloose/syntastic'
-call neobundle#config('syntastic', {
-	\ 'lazy' : 1,
-	\ 'autoload' : {
-	\   'insert' : 1,
-	\ }})
 
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
@@ -71,6 +66,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
 
 " Shortcuts
 Plug 'scrooloose/nerdcommenter'
@@ -104,5 +100,6 @@ Plug 'vhda/verilog_systemverilog.vim'
 
 Plug 'eagletmt/neco-ghc'            " For haskell completions
 Plug 'eagletmt/ghcmod-vim'
+Plug 'bitc/vim-hdevtools'
 
 call plug#end()
