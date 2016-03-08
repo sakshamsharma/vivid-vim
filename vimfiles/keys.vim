@@ -76,3 +76,5 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " NERDTree open
 nmap <F3> ;NERDTreeToggle<return>
+
+nmap <F7> ;TagbarToggle<CR>

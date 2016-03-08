@@ -3,9 +3,14 @@ source ~/.vim/vimfiles/functions.vim
 source ~/.vim/vimfiles/keys.vim
 source ~/.vim/vimfiles/settings.vim
 source ~/.vim/vimfiles/appearance.vim
-source ~/.vim/vimfiles/neocomplete.vim
 source ~/.vim/vimfiles/haskell.vim
 source ~/.vim/vimfiles/syntastic.vim
+
+if has('nvim')
+  let g:deoplete#enable_at_startup = 1
+else
+  source ~/.vim/vimfiles/neocomplete.vim
+endif
 
 " TODO
 " Move these commands into their proper places (?) sometime
@@ -35,10 +40,15 @@ vmap a- :Tabularize /-><CR>
 " ===============
 " ===============
 
-
-let &t_SI = "\<Esc>[6 q"
-let &t_SR = "\<Esc>[4 q"
-let &t_EI = "\<Esc>[2 q"
+" Cursor shape tweaks
+" Use bar in insert mode (much better than default one)
+if has('nvim')
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+else
+  let &t_SI = "\<Esc>[6 q"
+  let &t_SR = "\<Esc>[4 q"
+  let &t_EI = "\<Esc>[2 q"
+endif
 
 " The following content taken from Harsh Sharma's vimrc
 
@@ -70,4 +80,4 @@ map <S-F8> :noremap j j <CR> :noremap k k <CR>
 "
 " For haskell
 " ===
-" Install ghc-mod
+" Install ghc-mod, hsdevtools

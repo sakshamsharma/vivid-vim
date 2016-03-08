@@ -65,8 +65,10 @@ Plug 'KabbAmine/zeavim.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/deoplete.nvim'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
+Plug 'majutsushi/tagbar'
 
 " Shortcuts
 Plug 'scrooloose/nerdcommenter'
@@ -101,5 +103,7 @@ Plug 'vhda/verilog_systemverilog.vim'
 Plug 'eagletmt/neco-ghc'            " For haskell completions
 Plug 'eagletmt/ghcmod-vim'
 Plug 'bitc/vim-hdevtools'
+
+Plug 'ensime/ensime-vim'
 
 call plug#end()
