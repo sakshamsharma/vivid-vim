@@ -69,6 +69,8 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar'
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Shortcuts
 Plug 'scrooloose/nerdcommenter'
@@ -103,6 +105,7 @@ Plug 'vhda/verilog_systemverilog.vim'
 Plug 'eagletmt/neco-ghc'            " For haskell completions
 Plug 'eagletmt/ghcmod-vim'
 Plug 'bitc/vim-hdevtools'
+Plug 'dag/vim2hs'
 
 Plug 'ensime/ensime-vim'
 

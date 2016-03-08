@@ -5,12 +5,7 @@ source ~/.vim/vimfiles/settings.vim
 source ~/.vim/vimfiles/appearance.vim
 source ~/.vim/vimfiles/haskell.vim
 source ~/.vim/vimfiles/syntastic.vim
-
-if has('nvim')
-  let g:deoplete#enable_at_startup = 1
-else
-  source ~/.vim/vimfiles/neocomplete.vim
-endif
+source ~/.vim/vimfiles/completions.vim
 
 " TODO
 " Move these commands into their proper places (?) sometime
@@ -18,15 +13,6 @@ endif
 " For LaTeX-Suite
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
-
-" For haskell
-let g:haskell_enable_quantification = 1
-let g:haskell_enable_recursivedo = 1
-let g:haskell_enable_arrowsyntax = 1
-let g:haskell_enable_pattern_synonyms = 1
-let g:haskell_enable_typeroles = 1
-let g:haskell_enable_static_pointers = 1
-let g:haskell_indent_if = 3
 
 " NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif  "To autoclose if only nerd left
@@ -39,16 +25,6 @@ vmap a- :Tabularize /-><CR>
 " Miscellaneous
 " ===============
 " ===============
-
-" Cursor shape tweaks
-" Use bar in insert mode (much better than default one)
-if has('nvim')
-  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-else
-  let &t_SI = "\<Esc>[6 q"
-  let &t_SR = "\<Esc>[4 q"
-  let &t_EI = "\<Esc>[2 q"
-endif
 
 " The following content taken from Harsh Sharma's vimrc
 
