@@ -61,3 +61,9 @@ else
   let &t_EI = "\<Esc>[2 q"
 endif
 
+if has('nvim')
+  augroup term
+    autocmd!
+    autocmd BufWinEnter,WinEnter term://* setlocal nonumber norelativenumber
+  augroup END
+endif

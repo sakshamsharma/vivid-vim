@@ -3,8 +3,7 @@ cmap w!! w !sudo tee % >/dev/null
 
 " Return in normal mode inserts new line
 " Shift+Return inserts new line at top
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
+nmap <S-Enter> O<Esc> nmap <CR> o<Esc>
 
 " Toggles paste mode
 set pastetoggle=<F2>
@@ -84,3 +83,7 @@ nmap <F7> ;TagbarToggle<CR>
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+if has('nvim')
+  tnoremap <C-t> <C-\><C-n>
+endif

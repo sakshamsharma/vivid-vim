@@ -1,4 +1,5 @@
 set t_Co=256
+set background=dark
 colorscheme jellybeans
 
 set gfn=monofur\ for\ Powerline\ Regular\ 14
