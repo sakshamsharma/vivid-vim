@@ -1,4 +1,4 @@
-filetype plugin indent on
+"filetype plugin indent on
 set wrap
 set title  " Set window title automatically
 
@@ -42,7 +42,7 @@ set guioptions-=m
 set guioptions-=T
 
 " To avoid expanding tabs
-:autocmd Filetype make set noexpandtab
+autocmd Filetype make set noexpandtab
 
 " To reset cursor position on reopening file
 augroup resCur

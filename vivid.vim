@@ -14,6 +14,9 @@ source ~/.vim/vimfiles/completions.vim
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
+" Ignore gitignored files in ctrlp output
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
 " NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif  "To autoclose if only nerd left
 
