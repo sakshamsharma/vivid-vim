@@ -86,4 +86,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 if has('nvim')
   tnoremap <C-t> <C-\><C-n>
+  tnoremap <Esc> <C-\><C-n>
+  nmap <BS> <C-W>h
 endif
