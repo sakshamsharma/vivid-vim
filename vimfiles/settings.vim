@@ -67,3 +67,6 @@ if has('nvim')
     autocmd BufWinEnter,WinEnter term://* setlocal nonumber norelativenumber
   augroup END
 endif
+
+" To use nasm mode for asm
+au BufRead,BufNewFile *.asm set filetype=nasm
