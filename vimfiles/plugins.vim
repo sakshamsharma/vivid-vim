@@ -16,9 +16,6 @@ call neobundle#begin(expand('/home/saksham/.vim/bundle'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Add or remove your Bundles here:
-NeoBundle 'scrooloose/syntastic'
-
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \     'windows' : 'tools\\update-dll-mingw',
@@ -71,6 +68,8 @@ Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'scrooloose/syntastic'
+Plug 'benekastah/neomake'
 
 " Shortcuts
 Plug 'scrooloose/nerdcommenter'
