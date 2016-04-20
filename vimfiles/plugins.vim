@@ -1,43 +1,3 @@
-" NeoBundle
-"NeoBundle Scripts-----------------------------
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
-
-  " Required:
-  set runtimepath+=/home/saksham/.vim/bundle/neobundle.vim/
-endif
-
-" Required:
-call neobundle#begin(expand('/home/saksham/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
-
-" Required:
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-"End NeoBundle Scripts-------------------------
-
-
 " Plugins
 " =====================================
 " =====================================
@@ -68,6 +28,7 @@ Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'scrooloose/syntastic'
 Plug 'benekastah/neomake'
 
