@@ -45,11 +45,11 @@ set guioptions-=T
 autocmd Filetype make set noexpandtab
 
 " To reset cursor position on reopening file
+" Gold!
 augroup resCur
   autocmd!
   autocmd BufWinEnter * call ResCur()
 augroup END
-
 
 " Cursor shape tweaks
 " Use bar in insert mode (much better than default one)
@@ -57,10 +57,10 @@ if has('nvim')
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 else
   let &t_SI = "\<Esc>[6 q"
-  let &t_SR = "\<Esc>[4 q"
   let &t_EI = "\<Esc>[2 q"
 endif
 
+" Bug fix for messy line numbers in nvim term
 if has('nvim')
   augroup term
     autocmd!
@@ -70,3 +70,13 @@ endif
 
 " To use nasm mode for asm
 au BufRead,BufNewFile *.asm set filetype=nasm
+
+" For LaTeX-Suite
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+
+" Ignore gitignored files in ctrlp output
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif  "To autoclose if only nerd left

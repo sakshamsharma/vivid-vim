@@ -78,7 +78,6 @@ nmap <F3> ;NERDTreeToggle<return>
 
 nmap <F7> ;TagbarToggle<CR>
 
-
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -89,3 +88,18 @@ if has('nvim')
   tnoremap <Esc> <C-\><C-n>
   nmap <BS> <C-W>h
 endif
+
+" To toggle line numbering
+noremap <F4> :set invnu invrnu<CR>
+
+" Switch between different tab widths
+nnoremap <Leader>2 :set sw=2 <Bar> set sts=2<CR>
+nnoremap <Leader>4 :set sw=4 <Bar> set sts=4<CR>
+
+" capitalize the word preceding the cursor in insert mode
+imap <C-C> <Esc>gUiw`]a
+
+" Tabularize
+vmap a= :Tabularize /=<CR>
+vmap a; :Tabularize /::<CR>
+vmap a- :Tabularize /-><CR>
