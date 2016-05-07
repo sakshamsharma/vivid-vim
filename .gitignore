@@ -1,5 +1,6 @@
 *
 !vivid.vim
+!init.vim
 !undodir/
 !undodir/stub.md
 !.gitignore
