@@ -55,9 +55,6 @@ augroup END
 " Use bar in insert mode (much better than default one)
 if has('nvim')
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-else
-  let &t_SI = "\<Esc>[6 q"
-  let &t_EI = "\<Esc>[2 q"
 endif
 
 " Bug fix for messy line numbers in nvim term
