@@ -22,9 +22,9 @@ Plug 'benekastah/neomake', Cond(has('nvim'), { 'on': 'Neomake' })
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-" Shortcuts
 Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-scripts/closetag.vim', { 'on': [] }
+Plug 'altercation/vim-colors-solarized'
 
 Plug 'scrooloose/nerdcommenter' "{{{
   nmap <F3> ;NERDTreeToggle<return>
