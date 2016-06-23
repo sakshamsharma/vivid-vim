@@ -17,6 +17,8 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ervandew/supertab'
 Plug 'rking/ag.vim'
 Plug 'benekastah/neomake', Cond(has('nvim'), { 'on': 'Neomake' })
+Plug 'vim-scripts/AutoComplPop'
+
 
 " Git
 Plug 'tpope/vim-fugitive'
