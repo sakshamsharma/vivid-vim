@@ -52,15 +52,6 @@ vnoremap : ;
 " repeat last defined macro, Bonus: no Ex mode
 nnoremap Q @@
 
-" For camelcasemotion
-" Useful to remember
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-sunmap w
-sunmap b
-sunmap e
-
 " Exceptionally useful, these both
 " NERDcommenter mapping
 nmap // <leader>ci
@@ -75,13 +66,6 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " NERDTree open
 nmap <F3> ;NERDTreeToggle<return>
-
-nmap <F7> ;TagbarToggle<CR>
-
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 if has('nvim')
   tnoremap <C-t> <C-\><C-n>

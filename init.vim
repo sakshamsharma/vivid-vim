@@ -1,1 +1,1 @@
-source ~/.config/nvim/vivid.vim
+source /home/ssharma/.vim/vivid.vim

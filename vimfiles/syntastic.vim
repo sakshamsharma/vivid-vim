@@ -9,6 +9,5 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 
-autocmd FileType javascript let g:syntastic_javascript_checkers = ['eslint']
-
+autocmd FileType javascript let g:syntastic_javascript_checkers = ['eslint', 'jslint']
 autocmd FileType python let g:syntastic_python_checkers = ['pylint']
