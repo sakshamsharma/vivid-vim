@@ -91,4 +91,7 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
   let g:ctrlp_buftag_types = { 'ant': '--language-force=ant' }
 "}}}
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 call plug#end()
