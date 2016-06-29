@@ -19,7 +19,6 @@ Plug 'rking/ag.vim'
 Plug 'benekastah/neomake', Cond(has('nvim'), { 'on': 'Neomake' })
 Plug 'vim-scripts/AutoComplPop'
 
-
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -27,6 +26,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-scripts/closetag.vim', { 'on': [] }
 Plug 'altercation/vim-colors-solarized'
+
+" Languages
+Plug 'derekwyatt/vim-scala'
+Plug 'ensime/ensime-vim' "{{{
+  nnoremap <localleader>t :EnTypeCheck<CR>
+  au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
+"}}}
 
 Plug 'scrooloose/nerdcommenter' "{{{
   nmap <F3> ;NERDTreeToggle<return>

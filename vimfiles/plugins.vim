@@ -53,13 +53,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'derekwyatt/vim-scala'
 Plug '2072/vim-syntax-for-PHP'
 Plug 'raichoo/haskell-vim'
-"Plug 'fatih/vim-go'
-"Plug 'dart-lang/dart-vim-plugin'
-"Plug 'digitaltoad/vim-jade'
 Plug 'lervag/vimtex'
-"Plug 'rgrinberg/vim-ocaml'
-"Plug 'kchmck/vim-coffee-script'
-Plug 'vhda/verilog_systemverilog.vim'
 
 Plug 'eagletmt/neco-ghc'            " For haskell completions
 Plug 'eagletmt/ghcmod-vim'
