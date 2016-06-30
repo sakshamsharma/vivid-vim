@@ -25,7 +25,13 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-scripts/closetag.vim', { 'on': [] }
-Plug 'altercation/vim-colors-solarized'
+
+" Awesome fix for truecolor issue with nvim and solarized
+if has('nvim')
+  Plug 'frankier/neovim-colors-solarized-truecolor-only'
+else
+  Plug 'altercation/vim-colors-solarized'
+endif
 
 " Languages
 Plug 'derekwyatt/vim-scala'
