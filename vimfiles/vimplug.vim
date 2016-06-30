@@ -79,24 +79,19 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "{{{
 "}}}
 
 Plug 'ctrlpvim/ctrlp.vim' "{{{
-  nnoremap <leader>e :CtrlP<cr>
-  nnoremap <leader>E :CtrlPCurFile<cr>
-  nnoremap <leader>t :CtrlPBufTag<cr>
-  nnoremap <leader>T :CtrlPTag<cr>
-  nnoremap <leader>a :CtrlPBuffer<cr>
-  nnoremap <leader>A :CtrlPMRUFiles<cr>
-
   let g:ctrlp_match_window = 'bottom,order:btt,min:20,max:20,results:20'
-  let g:ctrlp_working_path_mode = 0
+
+  set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+  set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
   let g:ctrlp_custom_ignore = {
-        \ 'dir':  '\v[\/](\.git|\.hg|\.svn)$',
+        \ 'dir':  '\v[\/]\.(git|hg|svn)$',
         \ 'file': '\.pyc$\|\.pyo$',
         \ }
-  let g:ctrlp_open_multiple_files = '1jr'
-  let g:ctrlp_max_files = 0
-  let g:ctrlp_lazy_update = 50
-  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-  let g:ctrlp_buftag_types = { 'ant': '--language-force=ant' }
+  let g:ctrlp_map = '<c-p>'
+  let g:ctrlp_cmd = 'CtrlP'
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+  let g:ctrlp_working_path_mode = 'ra'
 "}}}
 
 Plug 'vim-airline/vim-airline'
