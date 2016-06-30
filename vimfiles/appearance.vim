@@ -1,8 +1,12 @@
 set nocompatible
+
 set t_Co=256
 syntax on
 set background=dark " dark | light "
+let g:solarized_termcolors=16
+let g:solarized_termtrans=0
 colorscheme solarized
+
 filetype plugin on
 call togglebg#map("<F6>")
 set cursorline
@@ -16,18 +20,24 @@ let g:airline_symbols.space = "\ua0"
 
 if has("win32") || has("win16") || has("win64")
   " Harsh times call for harsh measures
-  set guifont=Liberation_Mono_for_Powerline:h10 
+  set guifont=Liberation_Mono_for_Powerline:h10
   set encoding=utf-8 
 else
   " Home sweet home
-  set guifont=Liberation\ Mono\ for\ Powerline\ 10
+  set guifont=Literation\ Mono\ for\ Powerline\ 13
 endif
 
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='solarized'
 
+let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#right_sep = ' '
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+
+if has("nvim")
+  :let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+  :let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
