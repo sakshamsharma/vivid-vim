@@ -53,11 +53,6 @@ Plug 'vim-scripts/camelcasemotion' "{{{
   sunmap e
 "}}}
 
-Plug 'haya14busa/incsearch.vim' "{{{
-  map /  <Plug>(incsearch-forward)
-  map ?  <Plug>(incsearch-backward)
-"}}}
-
 Plug 'sirver/ultisnips', { 'on': [] } "{{{
   let g:UltiSnipsSnippetsDir = '~/.vim/plugged/vim-snippets/UltiSnips'
   let g:UltiSnipsExpandTrigger="<c-j>"
