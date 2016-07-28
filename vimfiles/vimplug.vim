@@ -26,19 +26,14 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-scripts/closetag.vim', { 'on': [] }
 
-" Awesome fix for truecolor issue with nvim and solarized
-if has('nvim')
-  Plug 'frankier/neovim-colors-solarized-truecolor-only'
-else
-  Plug 'altercation/vim-colors-solarized'
-endif
+Plug 'tomasr/molokai'
 
 " Languages
 Plug 'derekwyatt/vim-scala'
-Plug 'ensime/ensime-vim' "{{{
-  nnoremap <localleader>t :EnTypeCheck<CR>
-  au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
-"}}}
+"Plug 'ensime/ensime-vim' "{{{
+  "nnoremap <localleader>t :EnTypeCheck<CR>
+  "au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
+""}}}
 
 Plug 'scrooloose/nerdcommenter' "{{{
   nmap <F3> ;NERDTreeToggle<return>
@@ -97,5 +92,10 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+Plug 'eagletmt/neco-ghc'            " For haskell completions
+Plug 'eagletmt/ghcmod-vim'
+Plug 'bitc/vim-hdevtools'
+Plug 'dag/vim2hs'
 
 call plug#end()
