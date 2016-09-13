@@ -10,9 +10,9 @@ set foldmethod=indent   " Enable code folding with z,a
 set foldlevel=99
 
 set backspace=indent,eol,start
-set shiftwidth=2
+set shiftwidth=4
 set shiftround
-set tabstop=2
+set tabstop=4
 set smarttab
 set expandtab
 set wildmenu
