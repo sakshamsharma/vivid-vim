@@ -4,7 +4,7 @@ set t_Co=256
 syntax on
 set background=dark
 let g:molokai_original = 1
-colorscheme molokai
+colorscheme jellybeans
 
 filetype plugin on
 set cursorline
@@ -27,7 +27,7 @@ endif
 
 set laststatus=2
 "let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='molokai'
+let g:airline_theme='jellybeans'
 
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#left_sep = ' '

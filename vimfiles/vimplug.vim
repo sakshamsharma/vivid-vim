@@ -27,6 +27,7 @@ Plug 'Lokaltog/vim-easymotion'
 Plug 'vim-scripts/closetag.vim', { 'on': [] }
 
 Plug 'tomasr/molokai'
+Plug 'nanotech/jellybeans.vim'
 
 " Languages
 Plug 'derekwyatt/vim-scala'
@@ -97,5 +98,18 @@ Plug 'eagletmt/neco-ghc'            " For haskell completions
 Plug 'eagletmt/ghcmod-vim'
 Plug 'bitc/vim-hdevtools'
 Plug 'dag/vim2hs'
+
+Plug 'klen/python-mode' "{{{
+    " Override go-to.definition key shortcut to Ctrl-]
+    let g:pymode_rope_goto_definition_bind = "<C-]>"
+
+    " Override run current python file key shortcut to Ctrl-Shift-e
+    let g:pymode_run_bind = "<C-S-e>"
+
+    " Override view python doc key shortcut to Ctrl-Shift-d
+    let g:pymode_doc_bind = "<C-S-d>"
+"}}}
+
+Plug 'davidhalter/jedi-vim'
 
 call plug#end()
