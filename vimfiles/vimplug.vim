@@ -54,7 +54,7 @@ Plug 'sirver/ultisnips', { 'on': [] } "{{{
   let g:UltiSnipsExpandTrigger="<c-j>"
   let g:UltiSnipsJumpForwardTrigger="<c-j>"
   let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-  let g:UltiSnipsListSnippets="<c-l>"
+  "let g:UltiSnipsListSnippets="<c-l>"
 
   inoremap <silent> <C-j> <C-r>=LoadUltiSnips()<cr>
 
@@ -70,7 +70,7 @@ Plug 'sirver/ultisnips', { 'on': [] } "{{{
 
 Plug 'saaguero/vim-snippets'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "{{{
-  nnoremap <silent> <F4> :NERDTreeToggle<CR>
+  nnoremap <silent> <F3> ;NERDTreeToggle<CR>
   nnoremap <silent> <F5> :NERDTreeFind<CR>
   let NERDTreeShowHidden=1
 "}}}
@@ -86,9 +86,11 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
         \ 'file': '\.pyc$\|\.pyo$',
         \ }
   let g:ctrlp_map = '<c-p>'
-  let g:ctrlp_cmd = 'CtrlP'
+  let g:ctrlp_cmd = 'CtrlPMRUFiles'
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
   let g:ctrlp_working_path_mode = 'ra'
+
+  "map <C-[> ;CtrlPBuffer<return>
 "}}}
 
 Plug 'vim-airline/vim-airline'
@@ -98,18 +100,20 @@ Plug 'eagletmt/neco-ghc'            " For haskell completions
 Plug 'eagletmt/ghcmod-vim'
 Plug 'bitc/vim-hdevtools'
 Plug 'dag/vim2hs'
+Plug 'terryma/vim-multiple-cursors'
 
-Plug 'klen/python-mode' "{{{
-    " Override go-to.definition key shortcut to Ctrl-]
-    let g:pymode_rope_goto_definition_bind = "<C-]>"
+"Plug 'klen/python-mode' "{{{
+    "" Override go-to.definition key shortcut to Ctrl-]
+    "let g:pymode_rope_goto_definition_bind = "<C-]>"
 
-    " Override run current python file key shortcut to Ctrl-Shift-e
-    let g:pymode_run_bind = "<C-S-e>"
+    "" Override run current python file key shortcut to Ctrl-Shift-e
+    "let g:pymode_run_bind = "<C-S-e>"
 
-    " Override view python doc key shortcut to Ctrl-Shift-d
-    let g:pymode_doc_bind = "<C-S-d>"
-"}}}
+    "" Override view python doc key shortcut to Ctrl-Shift-d
+    "let g:pymode_doc_bind = "<C-S-d>"
+""}}}
 
 Plug 'davidhalter/jedi-vim'
+Plug 'tpope/vim-surround'
 
 call plug#end()

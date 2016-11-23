@@ -6,6 +6,11 @@ set background=dark
 let g:molokai_original = 1
 colorscheme jellybeans
 
+" For transparent background with molokai
+hi Normal ctermbg=none
+hi NonText ctermbg=none
+hi LineNr ctermbg=none
+
 filetype plugin on
 set cursorline
 
@@ -26,7 +31,7 @@ else
 endif
 
 set laststatus=2
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='jellybeans'
 
 let g:airline#extensions#tabline#fnamemod = ':t'
