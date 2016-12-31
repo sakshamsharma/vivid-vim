@@ -16,7 +16,7 @@ Plug 'vim-scripts/auto-pairs-gentle'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ervandew/supertab'
 Plug 'rking/ag.vim'
-Plug 'benekastah/neomake', Cond(has('nvim'), { 'on': 'Neomake' })
+"Plug 'benekastah/neomake', Cond(has('nvim'), { 'on': 'Neomake' })
 Plug 'vim-scripts/AutoComplPop'
 
 " Git
@@ -115,5 +115,7 @@ Plug 'terryma/vim-multiple-cursors'
 
 Plug 'davidhalter/jedi-vim'
 Plug 'tpope/vim-surround'
+
+Plug 'sakshamsharma/encfile-mode'
 
 call plug#end()
