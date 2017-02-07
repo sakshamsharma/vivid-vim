@@ -89,6 +89,6 @@ vmap a; :Tabularize /::<CR>
 vmap a- :Tabularize /-><CR>
 
 " Ensime shortcuts
-nnoremap <localleader>t :EnTypeCheck<CR>
-autocmd BufWritePost *.scala :EnTypeCheck 
-au FileType scala nnoremap <localleader>df :EnDeclarationSplit<CR>
+"nnoremap <localleader>t :EnTypeCheck<CR>
+"autocmd BufWritePost *.scala :EnTypeCheck
+"au FileType scala nnoremap <localleader>df :EnDeclarationSplit<CR>

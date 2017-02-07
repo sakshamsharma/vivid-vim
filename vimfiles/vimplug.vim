@@ -30,11 +30,24 @@ Plug 'tomasr/molokai'
 Plug 'nanotech/jellybeans.vim'
 
 " Languages
+Plug 'justinmk/vim-syntax-extra'
 Plug 'derekwyatt/vim-scala'
 "Plug 'ensime/ensime-vim' "{{{
   "nnoremap <localleader>t :EnTypeCheck<CR>
   "au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
 ""}}}
+Plug 'rust-lang/rust.vim' "{{{
+    let g:rustfmt_autosave = 1
+"}}}
+Plug 'racer-rust/vim-racer' "{{{
+    set hidden
+    let g:racer_cmd = "$HOME/.cargo/bin/racer"
+    let g:racer_experimental_completer = 1
+    au FileType rust nmap gd <Plug>(rust-def)
+    au FileType rust nmap gs <Plug>(rust-def-split)
+    au FileType rust nmap gx <Plug>(rust-def-vertical)
+    au FileType rust nmap <leader>gd <Plug>(rust-doc)
+"}}}
 
 Plug 'scrooloose/nerdcommenter' "{{{
   nmap <F3> ;NERDTreeToggle<return>
