@@ -128,6 +128,9 @@ Plug 'terryma/vim-multiple-cursors'
 
 Plug 'davidhalter/jedi-vim'
 Plug 'tpope/vim-surround'
+Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim'
+Plug 'fatih/vim-go'
 
 Plug 'sakshamsharma/encfile-mode'
 
