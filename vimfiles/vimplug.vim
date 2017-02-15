@@ -18,6 +18,25 @@ Plug 'ervandew/supertab'
 Plug 'rking/ag.vim'
 "Plug 'benekastah/neomake', Cond(has('nvim'), { 'on': 'Neomake' })
 Plug 'vim-scripts/AutoComplPop'
+Plug 'tpope/vim-sleuth'
+Plug 'rhysd/vim-clang-format' "{{{
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : -4,
+            \ "IndentWidth" : 4,
+            \ "TabWidth" : 4,
+            \ "AllowShortIfStatementsOnASingleLine" : "false",
+            \ "AllowShortBlocksOnASingleLine" : "false",
+            \ "AllowShortLoopsOnASingleLine" : "false",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "PointerAlignment" : "Right",
+            \ "DerivePointerAlignment" : "false",
+            \ "ColumnLimit" : 75,
+            \ "Standard" : "C++11" }
+augroup filetype_compile
+  autocmd!
+  autocmd BufWritePre *.c,*.cpp,*.objc,*.h ClangFormat
+augroup END
+"}}}
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -32,10 +51,6 @@ Plug 'nanotech/jellybeans.vim'
 " Languages
 Plug 'justinmk/vim-syntax-extra'
 Plug 'derekwyatt/vim-scala'
-"Plug 'ensime/ensime-vim' "{{{
-  "nnoremap <localleader>t :EnTypeCheck<CR>
-  "au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
-""}}}
 Plug 'rust-lang/rust.vim' "{{{
     let g:rustfmt_autosave = 1
 "}}}
@@ -131,6 +146,8 @@ Plug 'tpope/vim-surround'
 Plug 'Quramy/tsuquyomi'
 Plug 'leafgarland/typescript-vim'
 Plug 'fatih/vim-go'
+
+Plug 'godlygeek/tabular'
 
 Plug 'sakshamsharma/encfile-mode'
 

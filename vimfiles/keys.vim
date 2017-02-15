@@ -88,6 +88,10 @@ vmap a= :Tabularize /=<CR>
 vmap a; :Tabularize /::<CR>
 vmap a- :Tabularize /-><CR>
 
+" Switch buffers
+nnoremap  <silent>   <tab>  mq:bnext<CR>`q
+nnoremap  <silent> <s-tab>  mq:bprevious<CR>`q
+
 " Ensime shortcuts
 "nnoremap <localleader>t :EnTypeCheck<CR>
 "autocmd BufWritePost *.scala :EnTypeCheck
