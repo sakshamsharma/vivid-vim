@@ -35,7 +35,7 @@ vim +NeoBundleInstall +qall
 # Highlights
 + Mapping ```:``` to ```;```. No I'm not insane, this is perfectly logical. Try it.
 + All the cool plugins you would ever need (more like: You *should* be using)
-+ Convenient mappings for using the system clipboard (who like to use ```"+p``` for a simple paste?)
++ Convenient mappings for using the system clipboard (why would you want to use ```"+p``` for a simple paste?)
 + Undodir. Never ever lose your edit history because of prematurely quitting Vim.
 + All the sane settings you should ever need.
 + An awesome looking Airline statusline.
