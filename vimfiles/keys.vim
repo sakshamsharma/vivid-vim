@@ -60,10 +60,6 @@ nmap // <leader>ci
 nmap .. <leader><leader>w
 nmap ,, <leader><leader>b
 
-" CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
 " NERDTree open
 nmap <F3> ;NERDTreeToggle<return>
 
@@ -92,7 +88,5 @@ vmap a- :Tabularize /-><CR>
 nnoremap  <silent>   <tab>  mq:bnext<CR>`q
 nnoremap  <silent> <s-tab>  mq:bprevious<CR>`q
 
-" Ensime shortcuts
-"nnoremap <localleader>t :EnTypeCheck<CR>
-"autocmd BufWritePost *.scala :EnTypeCheck
-"au FileType scala nnoremap <localleader>df :EnDeclarationSplit<CR>
+" Heaven
+inoremap jk <Esc>

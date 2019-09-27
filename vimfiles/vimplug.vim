@@ -55,9 +55,10 @@ Plug 'ctrlpvim/ctrlp.vim' "{{{
         \ 'dir':  '\v[\/]\.(git|hg|svn)$',
         \ 'file': '\.pyc$\|\.pyo$',
         \ }
+
+  let g:ctrlp_root_markers = ['.repo', '.git']
   let g:ctrlp_map = '<c-p>'
-  let g:ctrlp_cmd = 'CtrlPMRUFiles'
-  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+  let g:ctrlp_cmd = 'CtrlP'
   let g:ctrlp_working_path_mode = 'ra'
 "}}}
 
@@ -72,5 +73,30 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } "{{{
   nnoremap <silent> <F5> :NERDTreeFind<CR>
   let NERDTreeShowHidden=1
 "}}}
+
+Plug 'junegunn/fzf', { 'do': './install --all' }
+
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ } "{{{
+
+  let g:LanguageClient_serverCommands = {
+      \ 'c': ['ccls-wrap', '--log-file=/tmp/cc.log'],
+      \ 'cpp': ['ccls-wrap', '--log-file=/tmp/cc.log'],
+      \ 'h': ['ccls-wrap', '--log-file=/tmp/cc.log'],
+      \ 'hpp': ['ccls-wrap', '--log-file=/tmp/cc.log'],
+      \ }
+
+  nn <silent> <M-.> :call LanguageClient#textDocument_definition()<cr>
+  nn <silent> <M-?> :call LanguageClient#textDocument_references({'includeDeclaration': v:false})<cr>
+  nn <silent> K :call LanguageClient#textDocument_hover()<cr>
+  nnoremap <silent> <M-,> <C-O>
+"}}}
+
+"if has('nvim')
+  "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  "let g:deoplete#enable_at_startup = 1
+"endif
 
 call plug#end()
