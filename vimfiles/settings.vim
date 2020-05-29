@@ -3,6 +3,9 @@ set wrap
 set title  " Set window title automatically
 
 set undofile
+if !isdirectory($HOME."/.vim/undodir")
+    call mkdir($HOME."/.vim/undodir", "", 0700)
+endif
 set undodir=~/.vim/undodir
 set undolevels=1000
 
